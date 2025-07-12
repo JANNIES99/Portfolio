@@ -11,30 +11,88 @@ abstract class AppTextStyle {
 
 class SmallTextStyles extends AppTextStyle {
   @override
-  // TODO: implement bodyLgBold
-  TextStyle get bodyLgBold =>
-      const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+  TextStyle get bodyLgBold => const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
 
   @override
-  // TODO: implement bodyLgMedium
-  TextStyle get bodyLgMedium =>
-      const TextStyle(fontSize: 14, fontWeight: FontWeight.w500);
+  TextStyle get bodyLgMedium => const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
 
   @override
-  // TODO: implement bodyMdMedium
-  TextStyle get bodyMdMedium =>
-      const TextStyle(fontSize: 12, fontWeight: FontWeight.w500);
+  TextStyle get bodyMdMedium => const TextStyle(
+    fontSize: 12,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
 
   @override
-  // TODO: implement titleLgBold
-  TextStyle get titleLgBold =>
-      const TextStyle(fontSize: 14, fontWeight: FontWeight.bold);
+  TextStyle get titleLgBold => const TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
 
   @override
-  // TODO: implement titleMdMedium
-  TextStyle get titleMdMedium => throw UnimplementedError();
+  TextStyle get titleMdMedium => const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
 
   @override
-  // TODO: implement titleSmBold
-  TextStyle get titleSmBold => throw UnimplementedError();
+  TextStyle get titleSmBold => const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
+}
+
+class LargeTextStyle extends AppTextStyle {
+  @override
+  TextStyle get bodyLgBold => const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
+
+  @override
+  TextStyle get bodyLgMedium => const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
+
+  @override
+  TextStyle get bodyMdMedium => const TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
+
+  @override
+  TextStyle get titleLgBold => const TextStyle(
+    fontSize: 28,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
+
+  @override
+  TextStyle get titleMdMedium => const TextStyle(
+    fontSize: 16,
+    fontWeight: FontWeight.w500,
+    fontFamily: "JetBrainsMono",
+  );
+
+  @override
+  TextStyle get titleSmBold => const TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.bold,
+    fontFamily: "JetBrainsMono",
+  );
 }

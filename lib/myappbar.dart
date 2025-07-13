@@ -12,6 +12,7 @@ class MyAppBar extends StatelessWidget {
       padding: EdgeInsets.symmetric(
         horizontal: context.appPaddings.horiPadding,
       ),
+      height: context.appPaddings.vertHeight,
       color: Theme.of(context).appBarTheme.backgroundColor,
       child: Row(
         children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],

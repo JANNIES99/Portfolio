@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/apptextstyle.dart';
+import 'package:portfolio/constants/appmenulist.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
 import 'package:portfolio/widgets/appbar/appbar_drawer_icon.dart';
@@ -17,14 +19,14 @@ class MyAppBar extends StatelessWidget {
         horizontal: context.appPaddings.horiPadding,
       ),
       height: context.appPaddings.vertHeight,
-      color: Colors.green, //Theme.of(context).appBarTheme.backgroundColor,
+      color: context.theme.appBarTheme.backgroundColor,
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: Insets.maxWidth),
         child: Row(
           children: [
             AppLogo(),
             Spacer(),
-            if (context.isDestop) AppMenu(),
+            if (context.isDestop) LargeMenu(),
             Spacer(),
             ThemeToggle(),
             if (context.isMobile) AppBarDrawerIcon(),
@@ -44,19 +46,36 @@ class AppLogo extends StatelessWidget {
   }
 }
 
-class AppMenu extends StatelessWidget {
-  const AppMenu({super.key});
+class LargeMenu extends StatelessWidget {
+  const LargeMenu({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: [
-        Text("Home"),
-        SizedBox(width: 10),
-        Text("GitHub"),
-        SizedBox(width: 10),
-        Text("Linkedin"),
-      ],
+      children:
+          AppMenuList.Items.map(
+            (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
+          ).toList(),
+    );
+  }
+}
+
+class LargeAppBarMenuItem extends StatelessWidget {
+  const LargeAppBarMenuItem({super.key, required this.text, this.url});
+
+  final String text;
+  final String? url;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: Insets.med,
+          vertical: Insets.xs,
+        ),
+        child: Text(text, style: SmallTextStyles().bodyLgMedium),
+      ),
     );
   }
 }

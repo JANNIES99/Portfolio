@@ -19,6 +19,8 @@ extension StyleContext on BuildContext {
   bool get isMobile => formFactor == FormFactorType.mobile;
   bool get isDestop => formFactor == FormFactorType.desktop;
 
+  ThemeData get theme => Theme.of(this);
+
   AppPadding get appPaddings {
     switch (formFactor) {
       case FormFactorType.mobile:

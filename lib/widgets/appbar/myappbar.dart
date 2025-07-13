@@ -4,6 +4,7 @@ import 'package:portfolio/constants/appmenulist.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
 import 'package:portfolio/widgets/appbar/appbar_drawer_icon.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 bool value = false;
 
@@ -68,7 +69,14 @@ class LargeAppBarMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {},
+      onTap: () async {
+        if (url != null) {
+          final Uri uri = Uri.parse(url!);
+          if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
+            print("Can not reach url");
+          }
+        }
+      },
       child: Container(
         padding: EdgeInsets.symmetric(
           horizontal: Insets.med,

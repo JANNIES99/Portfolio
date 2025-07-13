@@ -9,7 +9,9 @@ class MyAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return AnimatedContainer(
+      duration: Duration(milliseconds: 200),
+      alignment: Alignment.center,
       padding: EdgeInsets.symmetric(
         horizontal: context.appPaddings.horiPadding,
       ),
@@ -18,7 +20,14 @@ class MyAppBar extends StatelessWidget {
       child: ConstrainedBox(
         constraints: const BoxConstraints(maxWidth: Insets.maxWidth),
         child: Row(
-          children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],
+          children: [
+            AppLogo(),
+            Spacer(),
+            if (context.isDestop) AppMenu(),
+            Spacer(),
+            ThemeToggle(),
+            if (context.isMobile) Icon(Icons.menu),
+          ],
         ),
       ),
     );

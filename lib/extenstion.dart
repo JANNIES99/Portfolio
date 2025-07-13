@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/apptextstyle.dart';
+import 'package:portfolio/style/apppadding.dart';
 
 enum FormFactorType { mobile, desktop }
 
@@ -17,6 +18,15 @@ extension StyleContext on BuildContext {
 
   bool get isMobile => formFactor == FormFactorType.mobile;
   bool get isDestop => formFactor == FormFactorType.desktop;
+
+  AppPadding get appPaddings {
+    switch (formFactor) {
+      case FormFactorType.mobile:
+        return SmallPadding();
+      case FormFactorType.desktop:
+        return LargePadding();
+    }
+  }
 
   AppTextStyle get textStyle {
     switch (formFactor) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/extenstion.dart';
+import 'package:portfolio/style/apppadding.dart';
 
 bool value = false;
 
@@ -13,9 +14,12 @@ class MyAppBar extends StatelessWidget {
         horizontal: context.appPaddings.horiPadding,
       ),
       height: context.appPaddings.vertHeight,
-      color: Theme.of(context).appBarTheme.backgroundColor,
-      child: Row(
-        children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],
+      color: Colors.green, //Theme.of(context).appBarTheme.backgroundColor,
+      child: ConstrainedBox(
+        constraints: const BoxConstraints(maxWidth: Insets.maxWidth),
+        child: Row(
+          children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],
+        ),
       ),
     );
   }

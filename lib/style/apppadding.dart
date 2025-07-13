@@ -1,3 +1,7 @@
+class Insets {
+  static const double maxWidth = 1280;
+}
+
 abstract class AppPadding {
   double get horiPadding;
   double get vertHeight;

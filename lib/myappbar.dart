@@ -8,8 +8,14 @@ class MyAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],
+    return Container(
+      padding: EdgeInsets.symmetric(
+        horizontal: context.appPaddings.horiPadding,
+      ),
+      color: Theme.of(context).appBarTheme.backgroundColor,
+      child: Row(
+        children: [AppLogo(), Spacer(), AppMenu(), Spacer(), ThemeToggle()],
+      ),
     );
   }
 }
@@ -28,17 +34,14 @@ class AppMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Theme.of(context).appBarTheme.backgroundColor,
-      child: Row(
-        children: [
-          Text("Home"),
-          SizedBox(width: 10),
-          Text("GitHub"),
-          SizedBox(width: 10),
-          Text("Linkedin"),
-        ],
-      ),
+    return Row(
+      children: [
+        Text("Home"),
+        SizedBox(width: 10),
+        Text("GitHub"),
+        SizedBox(width: 10),
+        Text("Linkedin"),
+      ],
     );
   }
 }

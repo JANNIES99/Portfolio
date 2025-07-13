@@ -1,13 +1,13 @@
 abstract class AppPadding {
-  double get padding;
+  double get horiPadding;
 }
 
 class LargePadding extends AppPadding {
   @override
-  double get padding => 50;
+  double get horiPadding => 50;
 }
 
 class SmallPadding extends AppPadding {
   @override
-  double get padding => 16;
+  double get horiPadding => 16;
 }

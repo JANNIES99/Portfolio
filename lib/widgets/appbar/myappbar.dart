@@ -3,7 +3,9 @@ import 'package:portfolio/apptextstyle.dart';
 import 'package:portfolio/constants/appmenulist.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
+import 'package:portfolio/style/themeprovider.dart';
 import 'package:portfolio/widgets/appbar/appbar_drawer_icon.dart';
+import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 bool value = false;
@@ -98,13 +100,13 @@ class ThemeToggle extends StatefulWidget {
 class _ThemeToggleState extends State<ThemeToggle> {
   @override
   Widget build(BuildContext context) {
-    return Switch(
-      value: value,
-      onChanged: (value) {
+    return IconButton(
+      onPressed: () {
         setState(() {
-          value = !value;
+          Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
         });
       },
+      icon: Icon(Icons.sunny),
     );
   }
 }

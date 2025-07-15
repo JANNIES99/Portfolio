@@ -23,7 +23,6 @@ class MyApp extends StatelessWidget {
       themeMode: Provider.of<ThemeService>(context).themeMode,
       home: Homepage(),
       theme: AppTheme().lightTheme,
-      //Provider.of<ThemeProvider>(context).themeData,
     );
   }
 }

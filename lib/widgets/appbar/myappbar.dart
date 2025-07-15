@@ -103,10 +103,9 @@ class _ThemeToggleState extends State<ThemeToggle> {
     final themeService = Provider.of<ThemeService>(context, listen: false);
     return IconButton(
       onPressed: () {
-        //Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
         themeService.toggleTheme();
       },
-      icon: Icon(Icons.sunny),
+      icon: Icon(themeService.themeIcon),
     );
   }
 }

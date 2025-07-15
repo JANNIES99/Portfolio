@@ -21,7 +21,6 @@ class _AppBarDrawerIconState extends State<AppBarDrawerIcon>
       duration: const Duration(milliseconds: 200),
     );
     animation = Tween<double>(begin: 0.0, end: 1.0).animate(controller);
-    controller.forward();
     super.initState();
   }
 
@@ -31,9 +30,9 @@ class _AppBarDrawerIconState extends State<AppBarDrawerIcon>
       onPressed: () {
         setState(() {
           if (!menuIsOpen) {
-            controller.reverse();
-          } else {
             controller.forward();
+          } else {
+            controller.reverse();
           }
           menuIsOpen = !menuIsOpen;
         });

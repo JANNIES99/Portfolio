@@ -41,7 +41,7 @@ class AppTheme {
       elevatedButtonTextStyle: _lightElevatedButtonTextStyle,
       outlinedButtonTextStyle: _lightOutlinedButtonTextStyle,
       scaffoldBackgroundColor: AppColors.grey[100]!,
-      appBarTheme: AppBarTheme(color: AppColors.grey[900]),
+      appBarTheme: AppBarTheme(color: AppColors.grey[100]),
     );
   }
 

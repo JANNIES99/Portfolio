@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 void main() {
   runApp(
     ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
+      create: (context) => ThemeService(),
       child: const MyApp(),
     ),
   );
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: AppTheme().darkTheme,
-      themeMode: ThemeMode.light,
+      themeMode: Provider.of<ThemeService>(context).themeMode,
       home: Homepage(),
       theme: AppTheme().lightTheme,
       //Provider.of<ThemeProvider>(context).themeData,

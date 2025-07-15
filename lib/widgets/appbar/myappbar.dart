@@ -100,11 +100,11 @@ class ThemeToggle extends StatefulWidget {
 class _ThemeToggleState extends State<ThemeToggle> {
   @override
   Widget build(BuildContext context) {
+    final themeService = Provider.of<ThemeService>(context, listen: false);
     return IconButton(
       onPressed: () {
-        setState(() {
-          Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
-        });
+        //Provider.of<ThemeProvider>(context, listen: false).toggleTheme();
+        themeService.toggleTheme();
       },
       icon: Icon(Icons.sunny),
     );

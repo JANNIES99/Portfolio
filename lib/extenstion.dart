@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/apptextstyle.dart';
 import 'package:portfolio/style/apppadding.dart';
+import 'package:portfolio/style/themeprovider.dart';
+import 'package:provider/provider.dart';
 
 enum FormFactorType { mobile, desktop }
 
@@ -20,6 +22,8 @@ extension StyleContext on BuildContext {
   bool get isDestop => formFactor == FormFactorType.desktop;
 
   ThemeData get theme => Theme.of(this);
+
+  ThemeService get themeService => Provider.of<ThemeService>(this);
 
   AppPadding get appPaddings {
     switch (formFactor) {

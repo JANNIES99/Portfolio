@@ -75,7 +75,7 @@ class LargeAppBarMenuItem extends StatelessWidget {
         if (url != null) {
           final Uri uri = Uri.parse(url!);
           if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
-            print("Can not reach url");
+            throw "Can not reach url";
           }
         }
       },

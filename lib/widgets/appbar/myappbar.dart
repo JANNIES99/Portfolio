@@ -34,6 +34,7 @@ class MyAppBar extends StatelessWidget {
                 Spacer(),
                 if (context.isDestop) LargeMenu(),
                 Spacer(),
+                IconMenu(),
                 ThemeToggle(),
                 if (context.isMobile) AppBarDrawerIcon(),
               ],
@@ -62,9 +63,27 @@ class LargeMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children:
-          AppMenuList.Items.map(
-            (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
-          ).toList(),
+          AppMenuList.items
+              .map(
+                (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
+              )
+              .toList(),
+    );
+  }
+}
+
+class IconMenu extends StatelessWidget {
+  const IconMenu({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        ...IconMenuList.items.map(
+          (var e) =>
+              IconAppBarMenuItem(text: e.title, url: e.url, icon: e.icon),
+        ),
+      ],
     );
   }
 }
@@ -76,9 +95,11 @@ class SmallMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children:
-          AppMenuList.Items.map(
-            (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
-          ).toList(),
+          AppMenuList.items
+              .map(
+                (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
+              )
+              .toList(),
     );
   }
 }
@@ -103,6 +124,37 @@ class LargeAppBarMenuItem extends StatelessWidget {
           vertical: Insets.xs,
         ),
         child: Text(text, style: SmallTextStyles().bodyLgMedium),
+      ),
+    );
+  }
+}
+
+class IconAppBarMenuItem extends StatelessWidget {
+  const IconAppBarMenuItem({
+    super.key,
+    required this.text,
+    required this.url,
+    required this.icon,
+  });
+
+  final String text;
+  final String url;
+  final ImageIcon icon;
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () async {
+        final Uri uri = Uri.parse(url);
+        if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
+          throw "Can not reach url";
+        }
+      },
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: Insets.med,
+          vertical: Insets.xs,
+        ),
+        child: icon,
       ),
     );
   }

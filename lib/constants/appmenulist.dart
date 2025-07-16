@@ -5,7 +5,7 @@ class IconMenuList {
     IconMenu(
       title: "Sourcecode",
       url: "https://github.com/JANNIES99/Portfolio",
-      icon: ImageIcon(AssetImage("assets/icons/github.png")),
+      icon: ImageIcon(AssetImage("assets/icons/sourcecode.png")),
     ),
     IconMenu(
       title: "GitHub",
@@ -15,7 +15,7 @@ class IconMenuList {
     IconMenu(
       title: "LinkedIn",
       url: "https://www.linkedin.com/in/jannies-varghese-676788321/",
-      icon: ImageIcon(AssetImage("assets/icons/github.png")),
+      icon: ImageIcon(AssetImage("assets/icons/linkedin.png")),
     ),
   ];
 }
@@ -30,10 +30,10 @@ class IconMenu {
 
 class AppMenuList {
   static List<AppMenu> get items => [
-    AppMenu(title: "Sourcecode", url: "https://github.com/JANNIES99/Portfolio"),
-    AppMenu(title: "GitHub", url: "https://github.com/JANNIES99"),
+    AppMenu(title: "Home", url: "/"),
+    AppMenu(title: "Projects", url: "/projects"),
     AppMenu(
-      title: "LinkedIn",
+      title: "/certificates",
       url: "https://www.linkedin.com/in/jannies-varghese-676788321/",
     ),
   ];

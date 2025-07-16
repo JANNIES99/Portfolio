@@ -32,7 +32,7 @@ class MyAppBar extends StatelessWidget {
               children: [
                 AppLogo(),
                 Spacer(),
-                if (context.isDestop) LargeMenu(),
+                //if (context.isDestop) LargeMenu(),
                 Spacer(),
                 IconMenu(),
                 ThemeToggle(),
@@ -41,7 +41,7 @@ class MyAppBar extends StatelessWidget {
             ),
           ),
         ),
-        if (!context.isDestop) DrawerMenu(),
+        //if (!context.isDestop) DrawerMenu(),
       ],
     );
   }

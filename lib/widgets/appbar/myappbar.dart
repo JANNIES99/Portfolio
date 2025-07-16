@@ -84,19 +84,17 @@ class SmallMenu extends StatelessWidget {
 }
 
 class LargeAppBarMenuItem extends StatelessWidget {
-  const LargeAppBarMenuItem({super.key, required this.text, this.url});
+  const LargeAppBarMenuItem({super.key, required this.text, required this.url});
 
   final String text;
-  final String? url;
+  final String url;
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () async {
-        if (url != null) {
-          final Uri uri = Uri.parse(url!);
-          if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
-            throw "Can not reach url";
-          }
+        final Uri uri = Uri.parse(url);
+        if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
+          throw "Can not reach url";
         }
       },
       child: Container(

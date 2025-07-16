@@ -11,7 +11,7 @@ class AppMenuList {
 
 class AppMenu {
   final String title;
-  final String? url;
+  final String url;
 
   AppMenu({required this.title, required this.url});
 }

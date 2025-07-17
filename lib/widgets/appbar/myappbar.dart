@@ -4,8 +4,8 @@ import 'package:portfolio/constants/appmenulist.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
 import 'package:portfolio/style/themeprovider.dart';
-import 'package:portfolio/widgets/appbar/appbar_drawer_icon.dart';
-import 'package:portfolio/widgets/appbar/drawermenu.dart';
+//import 'package:portfolio/widgets/appbar/appbar_drawer_icon.dart';
+//import 'package:portfolio/widgets/appbar/drawermenu.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -33,10 +33,10 @@ class MyAppBar extends StatelessWidget {
                 AppLogo(),
                 Spacer(),
                 //if (context.isDestop) LargeMenu(),
-                Spacer(),
+                //Spacer(),
                 IconMenu(),
                 ThemeToggle(),
-                if (context.isMobile) AppBarDrawerIcon(),
+                //if (context.isMobile) AppBarDrawerIcon(),
               ],
             ),
           ),

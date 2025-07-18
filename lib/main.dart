@@ -20,9 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       darkTheme: AppTheme().darkTheme,
+      theme: AppTheme().lightTheme,
       themeMode: Provider.of<ThemeService>(context).themeMode,
       home: Homepage(),
-      theme: AppTheme().lightTheme,
     );
   }
 }

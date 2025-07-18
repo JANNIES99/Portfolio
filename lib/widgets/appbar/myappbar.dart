@@ -25,7 +25,9 @@ class MyAppBar extends StatelessWidget {
             horizontal: context.appPaddings.horiPadding,
           ),
           height: context.appPaddings.vertHeight,
-          color: context.theme.appBarTheme.backgroundColor,
+          color: context.theme.appBarTheme.backgroundColor!.withValues(
+            alpha: 0.5,
+          ),
           child: ConstrainedBox(
             constraints: const BoxConstraints(maxWidth: Insets.maxWidth),
             child: Row(

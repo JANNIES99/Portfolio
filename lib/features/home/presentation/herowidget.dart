@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/features/home/presentation/herotext.dart';
 import 'package:portfolio/style/apppadding.dart';
 
 class HeroWidget extends StatelessWidget {
@@ -22,11 +23,28 @@ class _SmallHero extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        ConstrainedBox(constraints: const BoxConstraints(maxWidth: 140)),
+        ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 140),
+          //child: HeroImage(),
+        ),
         SizedBox(height: Insets.xl),
-        //HeroTexts(),
+        const HeroText(),
         SizedBox(height: Insets.xxl),
-        //SmallHeroButtons(),
+      ],
+    );
+  }
+}
+
+class _LargeHero extends StatelessWidget {
+  const _LargeHero({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        //Expanded(child: HeroImage())
+        SizedBox(height: Insets.xxxl),
+        Expanded(flex: 2, child: Column(children: [HeroText()])),
       ],
     );
   }

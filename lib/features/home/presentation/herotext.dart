@@ -17,7 +17,7 @@ class HeroText extends StatelessWidget {
               : CrossAxisAlignment.center,
       children: [
         SEOtext(
-          HeroInfo.aboutme,
+          HeroInfo.introduction,
           textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
           style: context.textStyle.titleLgBold.copyWith(
             color: context.theme.colorScheme.onBackground,
@@ -25,6 +25,23 @@ class HeroText extends StatelessWidget {
           textRendererStyle: TextRendererStyle.header1,
         ),
         SizedBox(width: Insets.xs),
+        SEOtext(
+          HeroInfo.aboutme,
+          textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
+          style: context.textStyle.titleLgBold.copyWith(
+            color: context.theme.colorScheme.onBackground,
+          ),
+          textRendererStyle: TextRendererStyle.header2,
+        ),
+        SizedBox(width: Insets.med),
+        SEOtext(
+          HeroInfo.aboutme,
+          textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
+          style: context.textStyle.titleLgBold.copyWith(
+            color: context.theme.colorScheme.onSurface,
+          ),
+          textRendererStyle: TextRendererStyle.header3,
+        ),
       ],
     );
   }

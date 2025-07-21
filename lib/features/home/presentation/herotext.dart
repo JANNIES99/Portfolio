@@ -3,7 +3,6 @@ import 'package:portfolio/constants/herotext.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
 import 'package:portfolio/widgets/appbar/seotext.dart';
-import 'package:seo_renderer/seo_renderer.dart';
 
 class HeroText extends StatelessWidget {
   const HeroText({super.key});
@@ -22,25 +21,25 @@ class HeroText extends StatelessWidget {
           style: context.textStyle.titleLgBold.copyWith(
             color: context.theme.colorScheme.onBackground,
           ),
-          textRendererStyle: TextRendererStyle.header1,
+          //textRendererStyle: TextRendererStyle.header1,
         ),
         SizedBox(width: Insets.xs),
         SEOtext(
-          HeroInfo.aboutme,
+          HeroInfo.position,
           textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
-          style: context.textStyle.titleLgBold.copyWith(
+          style: context.textStyle.titleMdMedium.copyWith(
             color: context.theme.colorScheme.onBackground,
           ),
-          textRendererStyle: TextRendererStyle.header2,
+          //textRendererStyle: TextRendererStyle.header2,
         ),
-        SizedBox(width: Insets.med),
+        SizedBox(width: Insets.xl),
         SEOtext(
           HeroInfo.aboutme,
           textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
-          style: context.textStyle.titleLgBold.copyWith(
+          style: context.textStyle.titleMdMedium.copyWith(
             color: context.theme.colorScheme.onSurface,
           ),
-          textRendererStyle: TextRendererStyle.header3,
+          //textRendererStyle: TextRendererStyle.header3,
         ),
       ],
     );

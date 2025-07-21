@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/extenstion.dart';
+import 'package:portfolio/features/home/presentation/heroimage.dart';
 import 'package:portfolio/features/home/presentation/herotext.dart';
 import 'package:portfolio/style/apppadding.dart';
 
@@ -7,10 +9,10 @@ class HeroWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         Text("Flutter"),
-        //context.isDesktop? _LargeHero(): _SmallHero(),
+        context.isDesktop ? _LargeHero() : _SmallHero(),
       ],
     );
   }
@@ -25,7 +27,7 @@ class _SmallHero extends StatelessWidget {
       children: [
         ConstrainedBox(
           constraints: const BoxConstraints(maxWidth: 140),
-          //child: HeroImage(),
+          child: HeroImage(),
         ),
         SizedBox(height: Insets.xl),
         const HeroText(),
@@ -36,13 +38,13 @@ class _SmallHero extends StatelessWidget {
 }
 
 class _LargeHero extends StatelessWidget {
-  const _LargeHero({super.key});
+  const _LargeHero();
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        //Expanded(child: HeroImage())
+        Expanded(child: HeroImage()),
         SizedBox(height: Insets.xxxl),
         Expanded(flex: 2, child: Column(children: [HeroText()])),
       ],

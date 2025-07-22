@@ -5,11 +5,14 @@ class HeroImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 0.6,
-      child: ClipRRect(
-        borderRadius: const BorderRadius.all(Radius.circular(250)),
-        child: Image.asset('assets/images/me.jpeg', fit: BoxFit.cover),
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: AspectRatio(
+        aspectRatio: 0.6,
+        child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(250)),
+          child: Image.asset('assets/images/me.jpeg', fit: BoxFit.cover),
+        ),
       ),
     );
   }

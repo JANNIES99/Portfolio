@@ -3,9 +3,9 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class TypingText extends StatefulWidget {
-  const TypingText(this.text, {this.style, this.textAlign, super.key});
+  const TypingText(this.listOfText, {this.style, this.textAlign, super.key});
 
-  final String text;
+  final List<String> listOfText;
   final TextStyle? style;
   final TextAlign? textAlign;
 
@@ -15,29 +15,36 @@ class TypingText extends StatefulWidget {
 
 class _TypingTextState extends State<TypingText> {
   bool isForward = true;
-  int index = -1;
+  int textIndex = -1;
+  int listIndex = 0;
   late Timer timer;
-  late final int textLength = widget.text.length;
+  late String text;
+  late int textLength;
+  late int listLength = widget.listOfText.length;
   String onScreenText = "";
 
   @override
   void initState() {
-    timer = Timer.periodic(Duration(milliseconds: 250), (timer) {
+    text = widget.listOfText[listIndex];
+    textLength = text.length;
+    timer = Timer.periodic(Duration(milliseconds: 100), (timer) {
       if (isForward) {
-        index++;
-        if (index > textLength) {
+        textIndex++;
+        if (textIndex > textLength) {
           isForward = false;
-          index--;
+          textIndex--;
         }
       } else {
-        index--;
-        if (index < 0) {
+        textIndex--;
+        if (textIndex < 0) {
           isForward = true;
-          index += 2;
+          listIndex = (listIndex + 1) % listLength;
+          text = widget.listOfText[listIndex];
+          textIndex += 2;
         }
       }
       setState(() {
-        onScreenText = "${widget.text.substring(0, index)}_";
+        onScreenText = "${text.substring(0, textIndex)}_";
       });
     });
     super.initState();

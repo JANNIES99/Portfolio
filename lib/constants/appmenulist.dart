@@ -28,20 +28,20 @@ class IconMenu {
   IconMenu({required this.title, required this.url, required this.icon});
 }
 
-class AppMenuList {
-  static List<AppMenu> get items => [
-    AppMenu(title: "Home", url: "/"),
-    AppMenu(title: "Projects", url: "/projects"),
-    AppMenu(
-      title: "/certificates",
-      url: "https://www.linkedin.com/in/jannies-varghese-676788321/",
-    ),
-  ];
-}
+// class AppMenuList {
+//   static List<AppMenu> get items => [
+//     AppMenu(title: "Home", url: "/"),
+//     AppMenu(title: "Projects", url: "/projects"),
+//     AppMenu(
+//       title: "/certificates",
+//       url: "https://www.linkedin.com/in/jannies-varghese-676788321/",
+//     ),
+//   ];
+// }
 
-class AppMenu {
-  final String title;
-  final String url;
+// class AppMenu {
+//   final String title;
+//   final String url;
 
-  AppMenu({required this.title, required this.url});
-}
+//   AppMenu({required this.title, required this.url});
+// }

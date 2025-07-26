@@ -22,7 +22,6 @@ class HeroText extends StatelessWidget {
           style: context.textStyle.titleLgBold.copyWith(
             color: context.theme.colorScheme.onBackground,
           ),
-          //textRendererStyle: TextRendererStyle.header2,
         ),
         SizedBox(height: Insets.xxl),
         SEOtext(
@@ -31,7 +30,6 @@ class HeroText extends StatelessWidget {
           style: context.textStyle.titleMdMedium.copyWith(
             color: context.theme.colorScheme.onBackground,
           ),
-          //textRendererStyle: TextRendererStyle.header1,
         ),
         SizedBox(height: Insets.xl),
         SEOtext(
@@ -40,7 +38,6 @@ class HeroText extends StatelessWidget {
           style: context.textStyle.titleMdMedium.copyWith(
             color: context.theme.colorScheme.onSurface,
           ),
-          //textRendererStyle: TextRendererStyle.header3,
         ),
       ],
     );

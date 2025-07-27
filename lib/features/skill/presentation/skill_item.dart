@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
 
 class SkillItem extends StatelessWidget {
@@ -14,6 +15,12 @@ class SkillItem extends StatelessWidget {
           children: [
             AspectRatio(aspectRatio: 1.5, child: ClipRRect(child: image)),
             SizedBox(height: Insets.xxl),
+            Text(
+              name,
+              style: context.textStyle.bodyLgBold.copyWith(
+                color: context.theme.colorScheme.onBackground,
+              ),
+            ),
           ],
         ),
       ),

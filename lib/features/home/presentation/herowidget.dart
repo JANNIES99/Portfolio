@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/features/home/presentation/heroimage.dart';
 import 'package:portfolio/features/home/presentation/herotext.dart';
+import 'package:portfolio/features/home/presentation/home_skill_list.dart';
 import 'package:portfolio/style/apppadding.dart';
 
 class HeroWidget extends StatelessWidget {
@@ -13,6 +14,7 @@ class HeroWidget extends StatelessWidget {
       children: [
         Text("Flutter"),
         context.isDesktop ? _LargeHero() : _SmallHero(),
+        HomeSkillList(),
       ],
     );
   }

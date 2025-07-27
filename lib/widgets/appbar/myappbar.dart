@@ -58,21 +58,21 @@ class AppLogo extends StatelessWidget {
   }
 }
 
-class LargeMenu extends StatelessWidget {
-  const LargeMenu({super.key});
+// class LargeMenu extends StatelessWidget {
+//   const LargeMenu({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      children:
-          AppMenuList.items
-              .map(
-                (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
-              )
-              .toList(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Row(
+//       children:
+//           AppMenuList.items
+//               .map(
+//                 (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
+//               )
+//               .toList(),
+//     );
+//   }
+// }
 
 class IconMenu extends StatelessWidget {
   const IconMenu({super.key});
@@ -90,21 +90,21 @@ class IconMenu extends StatelessWidget {
   }
 }
 
-class SmallMenu extends StatelessWidget {
-  const SmallMenu({super.key});
+// class SmallMenu extends StatelessWidget {
+//   const SmallMenu({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children:
-          AppMenuList.items
-              .map(
-                (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
-              )
-              .toList(),
-    );
-  }
-}
+//   @override
+//   Widget build(BuildContext context) {
+//     return Column(
+//       children:
+//           AppMenuList.items
+//               .map(
+//                 (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
+//               )
+//               .toList(),
+//     );
+//   }
+// }
 
 class LargeAppBarMenuItem extends StatelessWidget {
   const LargeAppBarMenuItem({super.key, required this.text, required this.url});

@@ -3,10 +3,17 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class SingleTypeText extends StatefulWidget {
-  const SingleTypeText(this.text, {super.key, this.style, this.textAlign});
+  const SingleTypeText(
+    this.text, {
+    super.key,
+    this.style,
+    this.textAlign,
+    this.milliseconds = 50,
+  });
   final String text;
   final TextStyle? style;
   final TextAlign? textAlign;
+  final int milliseconds;
   @override
   State<SingleTypeText> createState() => _SingleTypeTextState();
 }

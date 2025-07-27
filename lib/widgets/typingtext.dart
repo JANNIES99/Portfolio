@@ -3,11 +3,18 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 
 class TypingText extends StatefulWidget {
-  const TypingText(this.listOfText, {this.style, this.textAlign, super.key});
+  const TypingText(
+    this.listOfText, {
+    this.style,
+    this.textAlign,
+    super.key,
+    this.milliseconds = 50,
+  });
 
   final List<String> listOfText;
   final TextStyle? style;
   final TextAlign? textAlign;
+  final int milliseconds;
 
   @override
   State<TypingText> createState() => _TypingTextState();

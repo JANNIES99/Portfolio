@@ -13,12 +13,13 @@ class SkillItem extends StatelessWidget {
         aspectRatio: 0.7,
         child: Column(
           children: [
-            AspectRatio(aspectRatio: 1.5, child: ClipRRect(child: image)),
+            AspectRatio(aspectRatio: 1, child: ClipRRect(child: image)),
             SizedBox(height: Insets.xxl),
             Text(
               name,
               style: context.textStyle.bodyLgBold.copyWith(
                 color: context.theme.colorScheme.onBackground,
+                overflow: TextOverflow.ellipsis,
               ),
             ),
           ],

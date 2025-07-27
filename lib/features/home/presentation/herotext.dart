@@ -38,6 +38,7 @@ class HeroText extends StatelessWidget {
           style: context.textStyle.titleMdMedium.copyWith(
             color: context.theme.colorScheme.onSurface,
           ),
+          milliseconds: 20,
         ),
       ],
     );

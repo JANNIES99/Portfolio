@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/herotext.dart';
 import 'package:portfolio/extenstion.dart';
 import 'package:portfolio/style/apppadding.dart';
-import 'package:portfolio/widgets/appbar/seotext.dart';
+import 'package:portfolio/widgets/appbar/single_type_text.dart';
 import 'package:portfolio/widgets/typingtext.dart';
 
 class HeroText extends StatelessWidget {
@@ -24,7 +24,7 @@ class HeroText extends StatelessWidget {
           ),
         ),
         SizedBox(height: Insets.xxl),
-        SEOtext(
+        SingleTypeText(
           HeroInfo.introduction,
           textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
           style: context.textStyle.titleMdMedium.copyWith(
@@ -32,7 +32,7 @@ class HeroText extends StatelessWidget {
           ),
         ),
         SizedBox(height: Insets.xl),
-        SEOtext(
+        SingleTypeText(
           HeroInfo.aboutme,
           textAlign: context.isDesktop ? TextAlign.left : TextAlign.center,
           style: context.textStyle.titleMdMedium.copyWith(

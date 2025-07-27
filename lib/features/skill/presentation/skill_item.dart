@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/style/apppadding.dart';
 
 class SkillItem extends StatelessWidget {
   const SkillItem({super.key, required this.name, required this.image});
@@ -12,6 +13,7 @@ class SkillItem extends StatelessWidget {
         child: Column(
           children: [
             AspectRatio(aspectRatio: 1.5, child: ClipRRect(child: image)),
+            SizedBox(height: Insets.xxl),
           ],
         ),
       ),

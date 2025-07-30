@@ -9,21 +9,25 @@ class SkillItem extends StatelessWidget {
   //TODO:Make a static card widget to use wrap in desktop
   @override
   Widget build(BuildContext context) {
-    return Card(
-      child: AspectRatio(
-        aspectRatio: 0.7,
-        child: Column(
-          children: [
-            AspectRatio(aspectRatio: 1, child: ClipRRect(child: image)),
-            SizedBox(height: Insets.xxl),
-            Text(
-              name,
-              style: context.textStyle.bodyLgBold.copyWith(
-                color: context.theme.colorScheme.onBackground,
-                overflow: TextOverflow.ellipsis,
+    return SizedBox(
+      height: 200,
+      width: 100,
+      child: Card(
+        child: AspectRatio(
+          aspectRatio: 0.7,
+          child: Column(
+            children: [
+              AspectRatio(aspectRatio: 1, child: ClipRRect(child: image)),
+              SizedBox(height: Insets.xxl),
+              Text(
+                name,
+                style: context.textStyle.bodyLgBold.copyWith(
+                  color: context.theme.colorScheme.onBackground,
+                  overflow: TextOverflow.ellipsis,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

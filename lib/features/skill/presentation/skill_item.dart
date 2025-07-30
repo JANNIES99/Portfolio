@@ -9,9 +9,10 @@ class SkillItem extends StatelessWidget {
   //TODO:Make a static card widget to use wrap in desktop
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200,
-      width: 100,
+    return Container(
+      margin: EdgeInsets.all(50),
+      height: 300,
+      width: 200,
       child: Card(
         child: AspectRatio(
           aspectRatio: 0.7,

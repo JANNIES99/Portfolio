@@ -21,54 +21,19 @@ class _DesktopSkillList extends StatelessWidget {
       padding: EdgeInsetsGeometry.symmetric(
         horizontal: context.appPaddings.horiPadding,
       ),
-      // child: Row(
-      //   children: [
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[0].name,
-      //         image: SkillList.items[0].logo,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[1].name,
-      //         image: SkillList.items[1].logo,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[2].name,
-      //         image: SkillList.items[2].logo,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[3].name,
-      //         image: SkillList.items[3].logo,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[4].name,
-      //         image: SkillList.items[4].logo,
-      //       ),
-      //     ),
-      //     Expanded(
-      //       child: SkillItem(
-      //         name: SkillList.items[5].name,
-      //         image: SkillList.items[5].logo,
-      //       ),
-      //     ),
-      //   ],
-      // ),
-      child: Row(
-        children:
-            SkillList.items
-                .map(
-                  (e) =>
-                      Expanded(child: SkillItem(name: e.name, image: e.logo)),
-                )
-                .toList(),
+
+      child: Column(
+        children: [
+          SizedBox(height: 100),
+          Text("Skill and Technologies", style: context.textStyle.titleLgBold),
+          Wrap(
+            alignment: WrapAlignment.center,
+            children:
+                SkillList.items
+                    .map((e) => SkillItem(name: e.name, image: e.logo))
+                    .toList(),
+          ),
+        ],
       ),
     );
   }

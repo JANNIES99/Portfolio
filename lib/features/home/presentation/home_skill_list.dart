@@ -8,7 +8,41 @@ class HomeSkillList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const _DesktopSkillList();
+    return context.isDesktop ? _DesktopSkillList() : _MobileSkillList();
+  }
+}
+
+class _MobileSkillList extends StatelessWidget {
+  const _MobileSkillList();
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(height: 100),
+        Text("Skill and Technologies", style: context.textStyle.titleLgBold),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                alignment: Alignment.center,
+                height: 400,
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  physics: BouncingScrollPhysics(),
+                  child: Row(
+                    children:
+                        SkillList.items
+                            .map((e) => SkillItem(name: e.name, image: e.logo))
+                            .toList(),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
   }
 }
 

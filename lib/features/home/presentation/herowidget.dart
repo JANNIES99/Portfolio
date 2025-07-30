@@ -12,9 +12,11 @@ class HeroWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Flutter"),
+        SizedBox(height: 200),
         context.isDesktop ? _LargeHero() : _SmallHero(),
         HomeSkillList(),
+        SizedBox(height: 100),
+        Text("Powered by Flutter", style: context.textStyle.bodyMdMedium),
       ],
     );
   }

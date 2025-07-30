@@ -26,7 +26,9 @@ class _SingleTypeTextState extends State<SingleTypeText> {
   String onScreenText = "";
   @override
   void initState() {
-    timer = Timer.periodic(Duration(milliseconds: 50), (timer) {
+    timer = Timer.periodic(Duration(milliseconds: widget.milliseconds), (
+      timer,
+    ) {
       textIndex++;
       if (textIndex >= textLength) {
         setState(() {

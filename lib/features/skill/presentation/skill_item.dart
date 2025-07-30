@@ -6,7 +6,6 @@ class SkillItem extends StatelessWidget {
   const SkillItem({super.key, required this.name, required this.image});
   final String name;
   final Image image;
-  //TODO:Make a static card widget to use wrap in desktop
   @override
   Widget build(BuildContext context) {
     return Container(

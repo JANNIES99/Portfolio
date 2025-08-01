@@ -12,7 +12,7 @@ class HeroWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: 200),
+        SizedBox(height: 100),
         context.isDesktop ? _LargeHero() : _SmallHero(),
         HomeSkillList(),
         SizedBox(height: 100),

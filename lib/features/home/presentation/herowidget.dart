@@ -41,7 +41,6 @@ class _SmallHero extends StatelessWidget {
   }
 }
 
-//
 class _LargeHero extends StatelessWidget {
   const _LargeHero();
 

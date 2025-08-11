@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class ProjectList {
   static List<Project> get item => [];
 }

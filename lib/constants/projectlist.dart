@@ -4,7 +4,6 @@ class ProjectList {
   static List<Project> get item => [];
 }
 
-//
 class Project {
   Project({
     required this.name,

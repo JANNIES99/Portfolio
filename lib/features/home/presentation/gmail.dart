@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
 
+//put gmail as secret
+
 class ContactPage extends StatefulWidget {
   const ContactPage({super.key});
 

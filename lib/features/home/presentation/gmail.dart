@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_email_sender/flutter_email_sender.dart';
+import 'package:portfolio/constants/secret.dart';
 
 //put gmail as secret
 
@@ -22,7 +23,7 @@ class _ContactPageState extends State<ContactPage> {
         body:
             'Name: ${_nameController.text}\nEmail: ${_emailController.text}\n\nMessage:\n${_messageController.text}',
         subject: 'Portfolio Contact Form',
-        recipients: ['your_email@gmail.com'], // <-- put your Gmail here
+        recipients: [Secret.gmail],
         isHTML: false,
       );
 

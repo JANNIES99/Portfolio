@@ -42,42 +42,38 @@ class _ContactPageState extends State<ContactPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Contact Me")),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Form(
-          key: _formKey,
-          child: Column(
-            children: [
-              TextFormField(
-                controller: _nameController,
-                decoration: const InputDecoration(labelText: 'Your Name'),
-                validator:
-                    (value) => value!.isEmpty ? 'Please enter your name' : null,
-              ),
-              TextFormField(
-                controller: _emailController,
-                decoration: const InputDecoration(labelText: 'Your Email'),
-                validator:
-                    (value) =>
-                        value!.isEmpty ? 'Please enter your email' : null,
-              ),
-              TextFormField(
-                controller: _messageController,
-                maxLines: 4,
-                decoration: const InputDecoration(labelText: 'Message'),
-                validator:
-                    (value) => value!.isEmpty ? 'Please enter a message' : null,
-              ),
-              const SizedBox(height: 20),
-              ElevatedButton.icon(
-                onPressed: _sendEmail,
-                icon: const Icon(Icons.send),
-                label: const Text("Send Message"),
-              ),
-            ],
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Form(
+        key: _formKey,
+        child: Column(
+          children: [
+            TextFormField(
+              controller: _nameController,
+              decoration: const InputDecoration(labelText: 'Your Name'),
+              validator:
+                  (value) => value!.isEmpty ? 'Please enter your name' : null,
+            ),
+            TextFormField(
+              controller: _emailController,
+              decoration: const InputDecoration(labelText: 'Your Email'),
+              validator:
+                  (value) => value!.isEmpty ? 'Please enter your email' : null,
+            ),
+            TextFormField(
+              controller: _messageController,
+              maxLines: 4,
+              decoration: const InputDecoration(labelText: 'Message'),
+              validator:
+                  (value) => value!.isEmpty ? 'Please enter a message' : null,
+            ),
+            const SizedBox(height: 20),
+            ElevatedButton.icon(
+              onPressed: _sendEmail,
+              icon: const Icon(Icons.send),
+              label: const Text("Send Message"),
+            ),
+          ],
         ),
       ),
     );

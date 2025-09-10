@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/extenstion.dart';
-import 'package:portfolio/features/home/presentation/gmail.dart';
+//import 'package:portfolio/features/home/presentation/gmail.dart';
 import 'package:portfolio/features/home/presentation/heroimage.dart';
 import 'package:portfolio/features/home/presentation/herotext.dart';
 import 'package:portfolio/features/home/presentation/home_skill_list.dart';
@@ -16,7 +16,7 @@ class HeroWidget extends StatelessWidget {
         SizedBox(height: 100),
         context.isDesktop ? _LargeHero() : _SmallHero(),
         HomeSkillList(),
-        ContactPage(),
+        //ContactPage(),
         SizedBox(height: 100),
         Text("Powered by Flutter", style: context.textStyle.bodyMdMedium),
       ],

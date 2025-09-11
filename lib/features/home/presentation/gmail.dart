@@ -21,21 +21,23 @@ class _ContactPageState extends State<ContactPage> {
     if (_formKey.currentState!.validate()) {
       final Email email = Email(
         body:
-            'Name: ${_nameController.text}\nEmail: ${_emailController.text}\n\nMessage:\n${_messageController.text}',
-        subject: 'Portfolio Contact Form',
-        recipients: [Secret.gmail],
+            "From: ${_nameController.text}\n"
+            "Email: ${_emailController.text}\n\n"
+            "${_messageController.text}",
+        subject: "New Contact Message",
+        recipients: [Secret.gmail], // your email here
         isHTML: false,
       );
 
       try {
         await FlutterEmailSender.send(email);
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Email sent successfully!')),
-        );
-      } catch (error) {
         ScaffoldMessenger.of(
           context,
-        ).showSnackBar(SnackBar(content: Text('Failed to send email: $error')));
+        ).showSnackBar(const SnackBar(content: Text("Email app opened ✅")));
+      } catch (error) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text("Failed to open email app: $error")),
+        );
       }
     }
   }

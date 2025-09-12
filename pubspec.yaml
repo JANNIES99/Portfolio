@@ -37,6 +37,7 @@ dependencies:
   url_launcher: ^6.3.2
   provider: ^6.1.5
   flutter_email_sender: ^7.0.0
+  http: ^1.5.0
 
 dev_dependencies:
   flutter_test:

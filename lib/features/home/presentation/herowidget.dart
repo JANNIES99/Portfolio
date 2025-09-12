@@ -16,7 +16,7 @@ class HeroWidget extends StatelessWidget {
         SizedBox(height: 100),
         context.isDesktop ? _LargeHero() : _SmallHero(),
         HomeSkillList(),
-        ContactPage(),
+        ContactForm(),
         SizedBox(height: 100),
         Text("Powered by Flutter", style: context.textStyle.bodyMdMedium),
       ],

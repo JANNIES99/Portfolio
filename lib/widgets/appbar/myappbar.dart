@@ -8,6 +8,7 @@ import 'package:portfolio/style/themeprovider.dart';
 //import 'package:portfolio/widgets/appbar/drawermenu.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:web/web.dart' as web;
 
 bool value = false;
 
@@ -87,6 +88,20 @@ class IconMenu extends StatelessWidget {
         ),
       ],
     );
+  }
+}
+
+class Resume extends StatelessWidget {
+  const Resume({super.key});
+
+  void openPdfInNewTab() {
+    const pdfPath = 'assets/Resume.pdf';
+    web.window.open(pdfPath, '_blank');
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
 

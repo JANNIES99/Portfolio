@@ -101,7 +101,16 @@ class Resume extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return InkWell(
+      onTap: () async {},
+      child: Container(
+        padding: EdgeInsets.symmetric(
+          horizontal: Insets.med,
+          vertical: Insets.xs,
+        ),
+        child: ImageIcon(AssetImage("assets/icons/resume_d.png")),
+      ),
+    );
   }
 }
 

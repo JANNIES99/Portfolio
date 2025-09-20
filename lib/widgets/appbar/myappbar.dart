@@ -114,22 +114,6 @@ class Resume extends StatelessWidget {
   }
 }
 
-// class SmallMenu extends StatelessWidget {
-//   const SmallMenu({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Column(
-//       children:
-//           AppMenuList.items
-//               .map(
-//                 (AppMenu e) => LargeAppBarMenuItem(text: e.title, url: e.url),
-//               )
-//               .toList(),
-//     );
-//   }
-// }
-
 class LargeAppBarMenuItem extends StatelessWidget {
   const LargeAppBarMenuItem({super.key, required this.text, required this.url});
 

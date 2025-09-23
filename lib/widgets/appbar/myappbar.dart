@@ -155,32 +155,6 @@ class IconAppBarMenuItem extends StatelessWidget {
   }
 }
 
-// class SmallAppBarMenuItem extends StatelessWidget {
-//   const SmallAppBarMenuItem({super.key, required this.text, this.url});
-
-//   final String text;
-//   final String? url;
-//   @override
-//   Widget build(BuildContext context) {
-//     return InkWell(
-//       onTap: () async {
-//         if (url != null) {
-//           final Uri uri = Uri.parse(url!);
-//           if (!await launchUrl(uri, webOnlyWindowName: '_self')) {
-//             throw "Can not reach url";
-//           }
-//         }
-//       },
-//       child: Container(
-//         padding: EdgeInsets.symmetric(
-//           horizontal: Insets.med,
-//           vertical: Insets.xs,
-//         ),
-//         child: Text(text, style: SmallTextStyles().bodyLgMedium),
-//       ),
-//     );
-//   }
-// }
 
 class ThemeToggle extends StatefulWidget {
   const ThemeToggle({super.key});
